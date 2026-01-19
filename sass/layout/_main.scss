@@ -1,0 +1,29 @@
+main {
+  padding-top: 80px;
+
+}
+
+.proyecto-section {
+    max-width: auto;
+    margin: 4rem auto;
+    padding: 0 1rem;
+    @include grid(repeat(auto-fit, minmax(280px, 1fr)), auto,center,stretch);
+    gap: 2rem;
+
+     .section-header {
+    max-width: 600px;
+    margin: 0 auto 4rem;
+    text-align: center;
+
+    h2 {
+      font-size: 2.2rem;
+      color: map-get($colors, color3);
+      margin-bottom: 1rem;
+    }
+
+    p {
+      color: map-get($colors, color4);
+      line-height: 1.6;
+    }
+  }
+}

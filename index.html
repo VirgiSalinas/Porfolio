@@ -4,37 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+
     <title>Mi porfolio</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <header>
-        <a href=""><img src="./img/logo.png" alt=""></a>
+    <header class="navbar">
+        <a href="" class="logo"><img class="logo-home" src="./css/img/logo.png" alt=""></a>
         <nav>
             <ul>
-                <li><a href="">Proyectos</a></li>
-                <li><a href="">Servicios</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contact">Contacto</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section class="hero-section">
             <div class="content">
+
                 <div class="hero-texto">
                     <h1>Hola, soy Virginia Salinas</h1>
-                    <h4>Diseñadora/Frontend</h4>
-                    <p> Diseño y dsarrollo interfaces web simples, funcionales y con atencion al detalle.</p>
+                    <h4>Diseñadora / Frontend</h4>
+                    <p>
+                        Diseño y desarrollo interfaces web simples, funcionales y con atención al detalle.
+                    </p>
+                    <a href="#proyectos" class="cta">Ver proyectos</a>
                 </div>
-                <a href="" class="cta">Ver proyectos</a>
-            </div>
 
+                <div class="hero-foto">
+                    <img src="./css/img/hero.png" alt="Foto de Virginia Salinas">
+                </div>
+
+            </div>
         </section>
 
+
         <!--proyecto section-->
-        <section>
+        <section class="proyecto-section" id="proyectos">
+            <div class="section-header">
+                <h2>Mis proyectos</h2>
+                <p>
+                    Algunos de los trabajos que realicé aplicando diseño web, maquetado y JavaScript.
+                </p>
+            </div>
             <article class="proyect-card">
-                <img src="./img/hba.png" alt="Pagina para un examen final de graduacion sobre frutas congeladas">
+                <img src="./css/img/hba.png" alt="Pagina para un examen final de graduacion sobre frutas congeladas">
                 <h3>HBA Fruta Congelada Landing</h3>
                 <p>Se utilizo HTML y CSS, para darle algo de fluidez agregue Javascript</p>
                 <div class="project-action">
@@ -44,7 +59,7 @@
             </article>
 
             <article class="proyect-card">
-                <img src="./img/inmo.png" alt="Proyecto final de diseño web, solo con uso de HTML y sass">
+                <img src="./css/img/inmo.png" alt="Proyecto final de diseño web, solo con uso de HTML y sass">
                 <h3>Landing Inmobiliaria</h3>
                 <p>Para el final de Desarrollo Web, realice una pagina sobre Inmobiliarias solo utilizando HTML y Sass
                 </p>
@@ -55,7 +70,7 @@
             </article>
 
             <article class="proyect-card">
-                <img src="./img/portfolioone.png" alt="Proyecto Landing">
+                <img src="./css/img/portfolioone.png" alt="Proyecto Landing">
                 <h3>Primer Porfolio</h3>
                 <p>Para otro trabajo práctico realice un porfolio con lo básico, HTML y CSS</p>
                 <div class="project-action">
@@ -101,10 +116,14 @@
     <footer>
         <p>&copy; 2025 Mi Portfolio. Derechos reservados</p>
         <div class="socialred">
-            <div><i class="fab fa-google"></i> virgisalinas5@gmail.com</div>
+            <div>
+                <i class="fab fa-google"></i><a href="mailto:virgisalinas5@gmail.com">virgisalinas5@gmail.com</a>
+            </div>
             <div><i class="fab fa-instagram"></i> virgisalinas5</div>
         </div>
     </footer>
+
+    <script src="./js/main.js"></script>
 
 </body>
 

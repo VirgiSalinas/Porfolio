@@ -1,0 +1,74 @@
+.proyect-card {
+    background-color: map-get($colors, color1 );
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    @include flex(column, space-between,stretch, nowrap, 0);
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 30px rgba(0,0,0, 0.12);
+    }
+
+    img{
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+
+    h3{
+        margin: 1rem 1rem 0.5rem;
+        font-size: 1.1rem;
+        color: map-get($colors , color3 );
+    }
+
+    p{
+        margin: 0 1rem 1.5rem;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        color: map-get($colors, color4 );
+        flex-grow: 1;
+    }
+
+    .project-action {
+        padding: 1rem;
+        border-top: 1px solid map-get($colors, color2 );
+
+        @include flex(row, space-between,center, nowrap, 0.5rem);
+
+        .btn {
+            text-decoration: none;
+            background-color: map-get($colors, color5 );
+            color: map-get($colors, color1 );
+            padding: 0.45rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background-color: darken(map-get($colors, color5),5%);
+                transform: translateY(-1px);
+            }
+        }
+
+        .btn-fav {
+            background: none;
+            border: none;
+            font-size: 1.4rem;
+            cursor: pointer;
+            color: map-get($colors, color4 );
+            transition: color 0.3s ease, transform 0.2s ease;
+
+            &:hover {
+                color: map-get($colors, color5 );
+                transform: scale(1.2);
+            }
+
+            &.active{
+                color: map-get($colors, color5 );
+            }
+        }
+    }
+}

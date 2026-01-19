@@ -1,0 +1,11 @@
+header {
+    @include flex(none, space-between, none, center, none);
+    max-width: auto;
+    margin: 0 auto;
+    padding: 0.5rem 0.5rem;
+    .logo-home{
+    width:45px;
+    height: 45px;
+    }
+
+}
