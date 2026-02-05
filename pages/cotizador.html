@@ -99,17 +99,48 @@
         </section>
 
         <section class="datos-cliente">
-            <h3>Datos del cliente</h3>
+            <h3>Guardá tu cotización</h3>
+            <p class="datos-descripcion">Dejanos tus datos y te enviamos la cotización por email</p>
 
-            <label>
-                Nombre
-                <input type="text" id="nombre" readonly>
-            </label>
+            <form class="form-contacto" id="formContacto">
+                <div class="form-row">
+                    <label>
+                        Nombre completo *
+                        <input type="text" id="nombre" placeholder="Ej: Juan Pérez" required>
+                    </label>
 
-            <label>
-                Email
-                <input type="email" id="email" readonly>
-            </label>
+                    <label>
+                        Email *
+                        <input type="email" id="email" placeholder="tu@email.com" required>
+                    </label>
+                </div>
+
+                <div class="form-row">
+                    <label>
+                        Teléfono (opcional)
+                        <input type="tel" id="telefono" placeholder="+54 9 11 1234-5678">
+                    </label>
+
+                    <label>
+                        Empresa (opcional)
+                        <input type="text" id="empresa" placeholder="Nombre de tu empresa">
+                    </label>
+                </div>
+
+                <label>
+                    Mensaje adicional (opcional)
+                    <textarea id="mensaje" rows="4" placeholder="Contanos más sobre tu proyecto..."></textarea>
+                </label>
+
+                <button type="submit" class="btn-guardar">
+                    <i class="fas fa-paper-plane"></i> Enviar cotización
+                </button>
+            </form>
+
+            <div class="cotizacion-guardada" id="cotizacionGuardada" style="display: none;">
+                <i class="fas fa-check-circle"></i>
+                <p>¡Cotización guardada exitosamente!</p>
+            </div>
         </section>
 
 

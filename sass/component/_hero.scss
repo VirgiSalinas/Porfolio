@@ -62,7 +62,7 @@
       border-radius: 10px;
       font-weight: 600;
       transition: all 0.3s ease;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 8px 20px rgba(46, 57, 47, 0.25);
 
       &:hover {
         background-color: darken(map-get($colors, color5), 8%);
@@ -79,8 +79,8 @@
     position: relative;
 
     box-shadow:
-      0 15px 40px rgba(0, 0, 0, 0.25),
-      0 0 0 6px rgba(255, 255, 255, 0.05);
+      0 15px 40px rgba(46, 57, 47, 0.25),
+      0 0 0 6px rgba(46, 57, 47, 0.15);
 
 
     img {

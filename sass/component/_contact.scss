@@ -4,14 +4,14 @@
 
     .contact-title {
         font-size: 2rem;
-        color: map-get($colors, color3 );
+        color: map-get($colors, color3);
         margin-bottom: 0.5rem;
     }
 
     .contact-divider {
         width: 60px;
         height: 3px;
-        background-color: map-get($colors, color5 );
+        background-color: map-get($colors, color5);
         margin: 0.5rem auto 1rem;
         border-radius: 5px;
     }
@@ -24,12 +24,12 @@
 }
 
 .contact-form {
-    background-color: map-get($colors, color1 );
+    background-color: map-get($colors, color1);
     padding: 2.5rem;
     border-radius: 15px;
-    box-shadow: 0 12px 30px rgba(0,0,0, 0.08);
+    box-shadow: 0 12px 30px rgba(46, 57, 47, 0.15);
 
-    @include grid(1fr, auto, stretch,center);
+    @include grid(1fr, auto, stretch, center);
     gap: 1.5rem;
 }
 
@@ -38,7 +38,7 @@
 
     .form-label {
         font-size: 0.85rem;
-        color: map-get($colors, color3 );
+        color: map-get($colors, color3);
         font-weight: 500;
     }
 
@@ -46,13 +46,13 @@
     .form-textarea {
         padding: 0.6rem 0.8rem;
         border-radius: 8px;
-        border: 1px solid map-get($colors, color2 );
+        border: 1px solid map-get($colors, color2);
         font-size: 0.9rem;
         transition: border-color 0.3s ease, box-shadow 0.3s;
 
         &:focus {
             outline: none;
-            border-color: map-get($colors, color5 );
+            border-color: map-get($colors, color5);
             box-shadow: 0 0 0 2px rgba(46, 57, 47, 0.15);
         }
     }
@@ -60,20 +60,20 @@
 }
 
 .submit-button {
-  margin-top: 1rem;
-  align-self: center;
+    margin-top: 1rem;
+    align-self: center;
 
-  background-color: map-get($colors, color5);
-  color: map-get($colors, color1);
-  padding: 0.6rem 2rem;
-  border: none;
-  border-radius: 25px;
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+    background-color: map-get($colors, color5);
+    color: map-get($colors, color1);
+    padding: 0.6rem 2rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 
-  &:hover {
-    background-color: darken(map-get($colors, color5), 5%);
-    transform: translateY(-2px);
-  }
+    &:hover {
+        background-color: darken(map-get($colors, color5), 5%);
+        transform: translateY(-2px);
+    }
 }
