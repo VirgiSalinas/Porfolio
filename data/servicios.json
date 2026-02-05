@@ -1,0 +1,36 @@
+{
+    "servicios": [
+        {
+            "id": "landing",
+            "nombre": "Landing Page",
+            "precio": 55000
+        },
+        {
+            "id": "web",
+            "nombre": "Sitio Web",
+            "precio": 85000
+        },
+        {
+            "id": "portfolio",
+            "nombre": "Portfolio",
+            "precio": 65000
+        }
+    ],
+    "extras": [
+        {
+            "id": "seo",
+            "nombre": "Optimización SEO",
+            "precio": 10000
+        },
+        {
+            "id": "responsive",
+            "nombre": "Desarrollo responsivo",
+            "precio": 80000
+        },
+        {
+            "id": "mantenimiento",
+            "nombre": "Mantenimiento mensual",
+            "precio": 12000
+        }
+    ]
+}

@@ -6,8 +6,14 @@
 @import "./base/tipografias";
 
 @import "./layout/header";
+@import "./layout/header-servicios";
+@import "./layout/header-cotizador";
 @import "./layout/main";
+@import "./layout/main-servicios";
+@import "./layout/main-cotizador";
 @import "./layout/footer";
+@import "./layout/main-servicios";
+@import "./layout/main-cotizador";
 
 @import "./component/navbar";
 @import "./component/card";

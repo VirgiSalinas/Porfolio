@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Cotizador | Virginia Salinas</title>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo"><img class="logo-home" src="../css/img/logo.png" alt="">
+                <h2 class="nav-name">Virginia Salinas</h2>
+            </a>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html#proyectos">Proyectos</a></li>
+                <li><a href="../index.html#contact">Contacto</a></li>
+                <li><a href="./servicios.html">Servicios</a></li>
+                <li><a href="./cotizador.html">Cotizador</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cotizador-section">
+
+            <!-- COLUMNA IZQUIERDA -->
+            <div class="cotizador-info">
+                <div class="cotizador-perfil">
+                    <img src="../css/img/hero.png" alt="Foto de Virginia Salinas">
+                </div>
+
+                <h2>
+                    Simulador de contratación <br>
+                    de servicios profesionales
+                </h2>
+
+                <p class="cotizador-descripcion">
+                    Simulá y cotizá mis servicios profesionales de diseño y desarrollo web
+                    en segundos, eligiendo las opciones que mejor se adapten a tus necesidades.
+                </p>
+
+                <ul class="cotizador-servicios">
+                    <li>Landing Page</li>
+                    <li>Diseño UX/UI</li>
+                    <li>Maquetado HTML & CSS</li>
+                    <li>Interactividad con JavaScript</li>
+                </ul>
+            </div>
+
+            <!-- COLUMNA DERECHA -->
+            <div class="cotizador-box">
+                <h3>Solicitá tu cotización</h3>
+
+                <form class="cotizador-form" id="cotizadorForm">
+
+                    <div class="form-group">
+                        <label for="servicio">Servicio</label>
+                        <select id="servicio">
+                            <option value="">Seleccionar</option>
+                            <option value="landing">Landing Page</option>
+                            <option value="web">Sitio web</option>
+                            <option value="portfolio">Portfolio</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <p class="form-label">Extras (opcionales)</p>
+
+                        <label class="checkbox">
+                            <input type="checkbox" name="extras" value="seo">
+                            Optimización SEO
+                        </label>
+
+                        <label class="checkbox">
+                            <input type="checkbox" name="extras" value="responsive">
+                            Desarrollo responsivo avanzado
+                        </label>
+
+                        <label class="checkbox">
+                            <input type="checkbox" name="extras" value="mantenimiento">
+                            Mantenimiento mensual
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-principal">Cotizar servicio</button>
+                </form>
+
+                <div class="cotizador-resultado" id="resultado">
+                    <p>Seleccioná opciones para ver el total.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="datos-cliente">
+            <h3>Datos del cliente</h3>
+
+            <label>
+                Nombre
+                <input type="text" id="nombre" readonly>
+            </label>
+
+            <label>
+                Email
+                <input type="email" id="email" readonly>
+            </label>
+        </section>
+
+
+    </main>
+
+
+    <footer>
+        <p>&copy; 2025 Mi Portfolio. Derechos reservados</p>
+        <div class="socialred">
+            <div>
+                <i class="fab fa-google"></i><a href="mailto:virgisalinas5@gmail.com">virgisalinas5@gmail.com</a>
+            </div>
+            <div><i class="fab fa-instagram"></i> virgisalinas5</div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/cotizador.js"></script>
+</body>
+
+</html>
