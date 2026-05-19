@@ -11,7 +11,7 @@ let datosListos = false;
 //carga de datos (json)
 async function cargarDatos() {
     try {
-        const response = await fetch("/data/servicios.json");
+        const response = await fetch("./data/servicios.json");
 
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
