@@ -11,7 +11,7 @@ let datosListos = false;
 //carga de datos (json)
 async function cargarDatos() {
     try {
-        const response = await fetch("data/servicios.json");
+        const response = await fetch("/data/servicios.json");
 
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
@@ -63,71 +63,7 @@ function calcularCotizacion(servicioId, checkboxesSeleccionados) {
     };
 }
 
-//Evento principal del formulario
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
 
-    //verificar que los datos esten cargados
-    if (!datosListos) {
-        Swal.fire({
-            title: "Cargando...",
-            text: "Por favor esperá un momento mientras se cargan los datos.",
-            icon: "warning",
-            confirmButtonColor: "#6b6b3f"
-        });
-        return;
-    }
-
-    const servicioSeleccionado = selectServicio.value;
-
-    //validacion del servicio
-    if (servicioSeleccionado === "") {
-        resultado.innerHTML = "<p>Por favor seleccioná un servicio.</p>";
-
-        Swal.fire({
-            title: "Atención",
-            text: "Debés seleccionar un servicio antes de cotizar.",
-            icon: "warning",
-            confirmButtonColor: "#6b6b3f"
-        });
-        return;
-    }
-
-    //Obtener extras seleccionados
-    const extrasSeleccionados = document.querySelectorAll(
-        "input[type='checkbox']:checked"
-    );
-
-    //Calcular cotizacion
-    const cotizacion = calcularCotizacion(servicioSeleccionado, extrasSeleccionados);
-
-    if (!cotizacion) {
-        resultado.innerHTML = "<p>Error al procesar la cotización.</p>";
-        return;
-    }
-
-    //Mostrar resultado
-    resultado.innerHTML = `
-        <p><strong>Servicio:</strong> ${cotizacion.servicioBase.nombre}</p>
-        <p><strong>Precio base:</strong> $${cotizacion.servicioBase.precio.toLocaleString('es-AR')}</p>
-
-        ${
-            cotizacion.extrasDetalle
-                ? `<p><strong>Extras:</strong></p><ul>${cotizacion.extrasDetalle}</ul>`
-                : "<p>Sin extras seleccionados</p>"
-        }
-
-        <p class="total"><strong>TOTAL:</strong> $${cotizacion.total.toLocaleString('es-AR')}</p>
-    `;
-
-    //Alerta de confirmacion
-    Swal.fire({
-        title: "¡Cotización generada!",
-        text: `Total: $${cotizacion.total.toLocaleString('es-AR')}`,
-        icon: "success",
-        confirmButtonColor: "#6b6b3f"
-    });
-});
 
 // Formulario de contacto
 const formContacto = document.getElementById("formContacto");
